@@ -10,10 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+      - fix-deprecated-command.patch  # [py3k]
 
 build:
-  skip: True  # [py3k]
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -37,3 +38,4 @@ about:
 extra:
   recipe-maintainers:
     - kynan
+    - sodre
