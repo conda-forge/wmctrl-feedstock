@@ -14,7 +14,7 @@ source:
       - fix-deprecated-command.patch  # [py3k]
 
 build:
-  number: 1002
+  number: 1003
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
