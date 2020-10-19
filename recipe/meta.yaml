@@ -36,7 +36,8 @@ about:
   home: http://bitbucket.org/antocuni/wmctrl
   summary: A tool to programmatically control windows inside X
   license: BSD-1-Clause
-  license_file: PLEASE_ADD_LICENSE_FILE
+  # No license file in the tarball and upstream link is dead :-/
+  # license_file: PLEASE_ADD_LICENSE_FILE
 
 extra:
   recipe-maintainers:
