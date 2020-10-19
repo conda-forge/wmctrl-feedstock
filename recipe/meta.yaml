@@ -1,39 +1,43 @@
 {% set name = "wmctrl" %}
 {% set version = "0.3" %}
-{% set sha256 = "d806f65ac1554366b6e31d29d7be2e8893996c0acbb2824bbf2b1f49cf628a13" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wmctrl-{{ version }}.tar.gz
+  sha256: d806f65ac1554366b6e31d29d7be2e8893996c0acbb2824bbf2b1f49cf628a13
   patches:
-      - fix-deprecated-command.patch  # [py3k]
+    - fix-deprecated-command.patch
 
 build:
-  number: 1002
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3
+    - pip
   run:
-    - python
+    - python >=3
 
 test:
   imports:
     - wmctrl
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://bitbucket.org/antocuni/wmctrl
-  license: BSD
-  license_family: BSD
-  summary: 'A tool to programmatically control windows inside X'
-  dev_url: https://bitbucket.org/antocuni/wmctrl
+  home: http://bitbucket.org/antocuni/wmctrl
+  summary: A tool to programmatically control windows inside X
+  license: BSD-1-Clause
+  # No license file in the tarball and upstream link is dead :-/
+  # license_file: PLEASE_ADD_LICENSE_FILE
 
 extra:
   recipe-maintainers:
