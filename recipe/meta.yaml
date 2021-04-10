@@ -1,7 +1,6 @@
 {% set name = "wmctrl" %}
 {% set version = "0.3" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -33,11 +32,12 @@ test:
     - pip
 
 about:
-  home: http://bitbucket.org/antocuni/wmctrl
+  home: http://github.com/antocuni/wmctrl
   summary: A tool to programmatically control windows inside X
-  license: BSD-1-Clause
-  # No license file in the tarball and upstream link is dead :-/
-  # license_file: PLEASE_ADD_LICENSE_FILE
+  license: MIT
+  # No license file in source distribution
+  # See https://github.com/antocuni/wmctrl/issues/7
+  # license_file: LICENSE
 
 extra:
   recipe-maintainers:
