@@ -1,5 +1,5 @@
 {% set name = "wmctrl" %}
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wmctrl-{{ version }}.tar.gz
-  sha256: d806f65ac1554366b6e31d29d7be2e8893996c0acbb2824bbf2b1f49cf628a13
+  sha256: 66cbff72b0ca06a22ec3883ac3a4d7c41078bdae4fb7310f52951769b10e14e0
   patches:
     - fix-deprecated-command.patch
 
