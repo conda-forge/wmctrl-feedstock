@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wmctrl-{{ version }}.tar.gz
   sha256: 66cbff72b0ca06a22ec3883ac3a4d7c41078bdae4fb7310f52951769b10e14e0
-  patches:
-    - fix-deprecated-command.patch
 
 build:
   number: 0
