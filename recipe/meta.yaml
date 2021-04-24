@@ -35,9 +35,7 @@ about:
   home: http://github.com/antocuni/wmctrl
   summary: A tool to programmatically control windows inside X
   license: MIT
-  # No license file in source distribution
-  # See https://github.com/antocuni/wmctrl/issues/7
-  # license_file: LICENSE
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
