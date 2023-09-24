@@ -1,5 +1,5 @@
 {% set name = "wmctrl" %}
-{% set version = "0.4" %}
+{% set version = "0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wmctrl-{{ version }}.tar.gz
-  sha256: 66cbff72b0ca06a22ec3883ac3a4d7c41078bdae4fb7310f52951769b10e14e0
+  sha256: 7839a36b6fe9e2d6fd22304e5dc372dbced2116ba41283ea938b2da57f53e962
 
 build:
   number: 0
