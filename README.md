@@ -143,6 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ehfd](https://github.com/ehfd/)
 * [@kynan](https://github.com/kynan/)
 * [@sodre](https://github.com/sodre/)
 
