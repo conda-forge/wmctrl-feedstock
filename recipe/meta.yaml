@@ -10,7 +10,7 @@ source:
   sha256: 7839a36b6fe9e2d6fd22304e5dc372dbced2116ba41283ea938b2da57f53e962
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -21,6 +21,9 @@ requirements:
   run:
     - python >=3
     - attrs
+    - __unix  # [unix]
+    - __win  # [win]
+    - wmctrl-cli  # [unix]
 
 test:
   imports:
@@ -40,3 +43,4 @@ extra:
   recipe-maintainers:
     - kynan
     - sodre
+    - ehfd
